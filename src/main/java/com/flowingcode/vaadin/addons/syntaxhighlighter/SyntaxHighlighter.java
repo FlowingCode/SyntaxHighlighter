@@ -26,16 +26,34 @@ import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.dependency.NpmPackage;
 import com.vaadin.flow.component.react.ReactAdapterComponent;
 
+/**
+ * A Vaadin component that wraps the react-syntax-highlighter library to provide syntax highlighting for code snippets.
+ *
+ * @author mlopezFC
+ * @since 1.0.0
+ */
 @SuppressWarnings("serial")
 @NpmPackage(value = "react-syntax-highlighter", version = "15.5.0")
 @JsModule("./react-syntax-highlighter.tsx")
 @Tag("syntax-highlighter")
 public class SyntaxHighlighter extends ReactAdapterComponent implements HasSize {
 
+  /**
+   * Constructs a new SyntaxHighlighter with default settings.
+   */
   public SyntaxHighlighter() {
     this(SHLanguage.JAVA, SHStyle.A11YDARK ,"", false, false);
   }
 
+  /**
+   * Constructs a new SyntaxHighlighter with the specified settings.
+   *
+   * @param language The programming language to highlight.
+   * @param style The style to apply to the highlighted code.
+   * @param content The code content to highlight.
+   * @param showLineNumbers Whether to show line numbers.
+   * @param wrapLines Whether to wrap lines.
+   */
   public SyntaxHighlighter(SHLanguage language, SHStyle style, String content, boolean showLineNumbers, boolean wrapLines) {
     setSHStyle(style);
     setSHLanguage(language);
@@ -59,14 +77,14 @@ public class SyntaxHighlighter extends ReactAdapterComponent implements HasSize 
   }
 
   public SHLanguage getSHLanguage() {
-    return SHLanguage.valueOf(getState("language", String.class));
+    return SHLanguage.valueOf(getState("language", String.class).toUpperCase());
   }
   public void setSHLanguage(SHLanguage language) {
     setState("language", language.getName());
   }
 
   public SHStyle getSHStyle() {
-    return SHStyle.valueOf(getState("stylename", String.class));
+    return SHStyle.valueOf(getState("stylename", String.class).toUpperCase());
   }
   public void setSHStyle(SHStyle style) {
     setState("stylename", style.getName());

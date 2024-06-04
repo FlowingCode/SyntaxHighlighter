@@ -26,6 +26,13 @@ import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.dependency.NpmPackage;
 import com.vaadin.flow.component.react.ReactAdapterComponent;
 
+/**
+ * A Vaadin component that wraps the react-syntax-highlighter library to provide syntax highlighting for code snippets.
+ * Prism implementation
+ *
+ * @author mlopezFC
+ * @since 1.0.0
+ */
 @SuppressWarnings("serial")
 @NpmPackage(value = "react-syntax-highlighter", version = "15.5.0")
 @JsModule("./react-syntax-highlighter-prism.tsx")
@@ -36,6 +43,15 @@ public class SyntaxHighlighterPrism extends ReactAdapterComponent implements Has
     this(SHLanguagePrism.JAVA, null ,"a11yDark", false, false);
   }
 
+  /**
+   * Constructs a new SyntaxHighlighter with the specified settings.
+   *
+   * @param language The programming language to highlight.
+   * @param style The style to apply to the highlighted code.
+   * @param content The code content to highlight.
+   * @param showLineNumbers Whether to show line numbers.
+   * @param wrapLines Whether to wrap lines.
+   */
   public SyntaxHighlighterPrism(SHLanguagePrism language, SHStylePrism style, String content, boolean showLineNumbers, boolean wrapLines) {
     setSHStyle(style);
     setSHLanguage(language);
