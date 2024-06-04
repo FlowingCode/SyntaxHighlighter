@@ -34,11 +34,11 @@ public class SyntaxHighlighterDemo extends VerticalLayout {
     style.addValueChangeListener(ev->{
       sh.setSHStyle(style.getValue());
     });
-    style.setValue(SHStyle.IDEA);
+    style.setValue(SHStyle.A11YDARK);
     ComboBox<SHLanguage> languages = new ComboBox<>();
     languages.setItems(SHLanguage.values());
     languages.setItemLabelGenerator(language->language.getName());
-    languages.setValue(SHLanguage.TYPESCRIPT);
+    languages.setValue(SHLanguage.JAVASCRIPT);
     languages.addValueChangeListener(ev->{
       sh.setSHLanguage(ev.getValue());
     });
