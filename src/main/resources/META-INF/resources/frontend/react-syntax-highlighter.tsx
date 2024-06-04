@@ -9,13 +9,13 @@ class SyntaxHighlighterElement extends ReactAdapterElement {
     protected override render(hooks: RenderHooks): ReactElement | null {
       const [language] = hooks.useState<string>("language"); 
       const [content] =  hooks.useState<string>("content");
-      const [style] = hooks.useState<string>("style");
+      const [stylename] = hooks.useState<string>("stylename");
       const [showLineNumbers] = hooks.useState<boolean>("showLineNumbers");
       const [wrapLongLines] = hooks.useState<boolean>("wrapLongLines");
-
+      
       return <SyntaxHighlighter 
       			language={language} 
-      			style={styles[style]}
+      			style={styles[stylename]}
       			showLineNumbers={showLineNumbers}
 	            wrapLongLines={wrapLongLines}
 	            customStyle={{

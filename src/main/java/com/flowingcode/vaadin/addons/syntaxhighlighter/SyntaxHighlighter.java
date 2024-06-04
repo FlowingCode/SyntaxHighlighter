@@ -66,10 +66,10 @@ public class SyntaxHighlighter extends ReactAdapterComponent implements HasSize 
   }
 
   public SHStyle getSHStyle() {
-    return SHStyle.valueOf(getState("style", String.class));
+    return SHStyle.valueOf(getState("stylename", String.class));
   }
   public void setSHStyle(SHStyle style) {
-    setState("style", style.getName());
+    setState("stylename", style.getName());
   }
   
   public String getContent() {
