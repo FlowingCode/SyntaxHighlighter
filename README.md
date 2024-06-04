@@ -1,23 +1,24 @@
-[![Published on Vaadin Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/template-addon)
-[![Stars on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/template-addon.svg)](https://vaadin.com/directory/component/template-addon)
-[![Build Status](https://jenkins.flowingcode.com/job/template-addon/badge/icon)](https://jenkins.flowingcode.com/job/template-addon)
-[![Maven Central](https://img.shields.io/maven-central/v/com.flowingcode.vaadin.addons/template-addon)](https://mvnrepository.com/artifact/com.flowingcode.vaadin.addons/template-addon)
+[![Published on Vaadin Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/syntax-highlighter-addon)
+[![Stars on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/syntax-highlighter-addon.svg)](https://vaadin.com/directory/component/syntax-highlighter-addon)
+[![Build Status](https://jenkins.flowingcode.com/job/syntax-highlighter-addon/badge/icon)](https://jenkins.flowingcode.com/job/syntax-highlighter-addon)
+[![Maven Central](https://img.shields.io/maven-central/v/org.vaadin.addons.flowingcode/syntax-highlighter-addon)](https://mvnrepository.com/artifact/org.vaadin.addons.flowingcode/template-addon)
 
-# Template Add-on
+# SyntaxHighlighter Add-on
 
-This is a template project for building new Vaadin 24 add-ons
+This is a wrapper around the [React Syntax Highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter) component
 
 ## Features
 
-* List the features of your add-on in here
+* Supports both hljs and prism modes
+* Enums with styles and languages
 
 ## Online demo
 
-[Online demo here](http://addonsv24.flowingcode.com/template)
+[Online demo here](http://addonsv24.flowingcode.com/syntax-highlighter)
 
 ## Download release
 
-[Available in Vaadin Directory](https://vaadin.com/directory/component/template-addon)
+[Available in Vaadin Directory](https://vaadin.com/directory/component/syntax-highlighter-addon)
 
 ### Maven install
 
@@ -25,8 +26,8 @@ Add the following dependencies in your pom.xml file:
 
 ```xml
 <dependency>
-   <groupId>com.flowingcode.vaadin.addons</groupId>
-   <artifactId>template-addon</artifactId>
+   <groupId>org.vaadin.addons.flowingcode</groupId>
+   <artifactId>syntax-highlighter-addon</artifactId>
    <version>X.Y.Z</version>
 </dependency>
 ```
@@ -50,7 +51,7 @@ To see the demo, navigate to http://localhost:8080/
 
 ## Release notes
 
-See [here](https://github.com/FlowingCode/TemplateAddon/releases)
+See [here](https://github.com/FlowingCode/SyntaxHighlighter/releases)
 
 ## Issue tracking
 
@@ -75,13 +76,23 @@ Then, follow these steps for creating a contribution:
 
 This add-on is distributed under Apache License 2.0. For license terms, see LICENSE.txt.
 
-TEMPLATE_ADDON is written by Flowing Code S.A.
+SyntaxHighlighter Addon is written by Flowing Code S.A.
 
 # Developer Guide
 
 ## Getting started
 
-Add your code samples in this section
+You can instantiate the 	add-on by using the following syntax:
+
+    SyntaxHighlighter sh = new SyntaxHighlighter(SHLanguage.JAVASCRIPT, SHStyle.A11YDARK, defaultValue, false, false);
+
+You can also change the style and language by calling the appropriate getters:
+
+    sh.setSHLanguage(SHLanguage.JAVASCRIPT);
+
+The same with the styling:
+
+    sh.setSHStyle(SHStyle.A11YDARK);
 
 ## Special configuration when using Spring
 
