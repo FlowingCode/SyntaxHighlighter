@@ -33,7 +33,7 @@ import com.vaadin.flow.component.react.ReactAdapterComponent;
 public class SyntaxHighlighter extends ReactAdapterComponent implements HasSize {
 
   public SyntaxHighlighter() {
-    this(SHLanguage.JAVA, null ,"a11yDark", false, false);
+    this(SHLanguage.JAVA, SHStyle.A11YDARK ,"", false, false);
   }
 
   public SyntaxHighlighter(SHLanguage language, SHStyle style, String content, boolean showLineNumbers, boolean wrapLines) {
