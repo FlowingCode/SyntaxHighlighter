@@ -66,10 +66,10 @@ public class SyntaxHighlighterPrism extends ReactAdapterComponent implements Has
   }
 
   public SHStylePrism getSHStyle() {
-    return SHStylePrism.valueOf(getState("style", String.class));
+    return SHStylePrism.valueOf(getState("stylename", String.class));
   }
   public void setSHStyle(SHStylePrism style) {
-    setState("style", style.getName());
+    setState("stylename", style.getName());
   }
   
   public String getContent() {
