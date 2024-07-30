@@ -18,7 +18,7 @@ This is a wrapper around the [React Syntax Highlighter](https://github.com/react
 
 ## Download release
 
-[Available in Vaadin Directory](https://vaadin.com/directory/component/syntax-highlighter-addon)
+[Available in Vaadin Directory](https://vaadin.com/directory/component/syntax-highlighter-add-on)
 
 ### Maven install
 
