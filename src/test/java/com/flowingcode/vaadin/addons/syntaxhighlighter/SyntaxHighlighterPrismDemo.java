@@ -32,7 +32,7 @@ import com.vaadin.flow.router.Route;
 @DemoSource
 @PageTitle("Syntax Highlighter Add-on Demo (Prism)")
 @SuppressWarnings("serial")
-@Route(value = "demo-prism", layout = SyntaxHighlighterDemoView.class)
+@Route(value = "syntax-highlighter/prism", layout = SyntaxHighlighterDemoView.class)
 public class SyntaxHighlighterPrismDemo extends VerticalLayout {
 
   public SyntaxHighlighterPrismDemo() {

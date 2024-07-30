@@ -32,7 +32,7 @@ import com.vaadin.flow.router.Route;
 @DemoSource
 @PageTitle("Syntax Highlighter Add-on Demo")
 @SuppressWarnings("serial")
-@Route(value = "demo", layout = SyntaxHighlighterDemoView.class)
+@Route(value = "syntax-highlighter/basic", layout = SyntaxHighlighterDemoView.class)
 public class SyntaxHighlighterDemo extends VerticalLayout {
 
   public SyntaxHighlighterDemo() {
