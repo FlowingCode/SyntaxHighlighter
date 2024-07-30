@@ -1,7 +1,7 @@
 [![Published on Vaadin Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/syntax-highlighter-addon)
 [![Stars on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/syntax-highlighter-addon.svg)](https://vaadin.com/directory/component/syntax-highlighter-addon)
 [![Build Status](https://jenkins.flowingcode.com/job/syntax-highlighter-addon/badge/icon)](https://jenkins.flowingcode.com/job/syntax-highlighter-addon)
-[![Maven Central](https://img.shields.io/maven-central/v/org.vaadin.addons.flowingcode/syntax-highlighter-addon)](https://mvnrepository.com/artifact/org.vaadin.addons.flowingcode/template-addon)
+[![Maven Central](https://img.shields.io/maven-central/v/org.vaadin.addons.flowingcode/syntax-highlighter-addon)](https://mvnrepository.com/artifact/com.flowingcode.vaadin.addons/syntax-highlighter-addon)
 
 # SyntaxHighlighter Add-on
 
