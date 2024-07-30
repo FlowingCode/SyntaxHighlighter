@@ -19,6 +19,12 @@
  */
 package com.flowingcode.vaadin.addons.syntaxhighlighter;
 
+/**
+ * Enum representing different programming languages supported by Syntax Highlighter.
+ *
+ * @author mlopezFC
+ * @since 1.0.0
+ */
 public enum SHLanguage {
   
   ONEC("oneC"),
