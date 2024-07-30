@@ -27,7 +27,7 @@ import com.vaadin.flow.router.Route;
 
 @SuppressWarnings("serial")
 @ParentLayout(DemoLayout.class)
-@Route("basic")
+@Route("syntax-highlighter")
 @GithubLink("https://github.com/FlowingCode/SyntaxHighlighter")
 public class SyntaxHighlighterDemoView extends TabbedDemo {
 
