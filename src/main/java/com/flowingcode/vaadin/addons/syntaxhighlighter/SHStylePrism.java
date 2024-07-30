@@ -19,6 +19,13 @@
  */
 package com.flowingcode.vaadin.addons.syntaxhighlighter;
 
+/**
+ * Enum representing different styles supported by the Syntax Highlighter.
+ * Used only with Prism implementation
+ *
+ * @author mlopezFC
+ * @since 1.0.0
+ */
 public enum SHStylePrism {
   
   COY("coy"),

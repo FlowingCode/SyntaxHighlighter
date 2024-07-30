@@ -19,6 +19,13 @@
  */
 package com.flowingcode.vaadin.addons.syntaxhighlighter;
 
+/**
+ * Enum representing different programming languages supported by the Syntax Highlighter.
+ * Used only with Prism implementation
+ *
+ * @author mlopezFC
+ * @since 1.0.0
+ */
 public enum SHLanguagePrism {
   
   ACTIONSCRIPT("actionscript"),

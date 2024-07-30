@@ -19,6 +19,12 @@
  */
 package com.flowingcode.vaadin.addons.syntaxhighlighter;
 
+/**
+ * Enum representing different styles supported by the Syntax Highlighter.
+ *
+ * @author mlopezFC
+ * @since 1.0.0
+ */
 public enum SHStyle {
   
   A11YDARK("a11yDark"),
