@@ -26,7 +26,7 @@ Add the following dependencies in your pom.xml file:
 
 ```xml
 <dependency>
-   <groupId>org.vaadin.addons.flowingcode</groupId>
+   <groupId>com.flowingcode.vaadin.addons</groupId>
    <artifactId>syntax-highlighter-addon</artifactId>
    <version>X.Y.Z</version>
 </dependency>
@@ -76,7 +76,7 @@ Then, follow these steps for creating a contribution:
 
 This add-on is distributed under Apache License 2.0. For license terms, see LICENSE.txt.
 
-SyntaxHighlighter Addon is written by Flowing Code S.A.
+SyntaxHighlighter Add-on is written by Flowing Code S.A.
 
 # Developer Guide
 
