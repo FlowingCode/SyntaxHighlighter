@@ -58,16 +58,34 @@ public class SyntaxHighlighterPrism extends BaseSyntaxHighlighter {
     setWrapLines(false);
   }
   
+  /**
+   * Obtains the current SyntaxHighlighterPrism Language
+   * @return
+   */
   public SHLanguagePrism getSHLanguage() {
     return SHLanguagePrism.valueOf(getState("language", String.class).toUpperCase());
   }
+
+  /**
+   * Sets the SyntaxHighlighterPrism Language
+   * @param language
+   */
   public void setSHLanguage(SHLanguagePrism language) {
     setState("language", language.getName());
   }
 
+  /**
+   * Obtains the current SyntaxHighlighterPrism Style
+   * @return
+   */
   public SHStylePrism getSHStyle() {
     return SHStylePrism.valueOf(getState("stylename", String.class).toUpperCase());
   }
+
+  /**
+   * Sets the SyntaxHighlighter Style
+   * @param style
+   */
   public void setSHStyle(SHStylePrism style) {
     setState("stylename", style.getName());
   }
