@@ -28,7 +28,7 @@ import com.vaadin.flow.component.react.ReactAdapterComponent;
 
 /**
  * A Vaadin component that wraps the react-syntax-highlighter library to provide syntax highlighting for code snippets.
- * Prism implementation
+ * This implementation is based on Prism.js (more information here: https://github.com/react-syntax-highlighter/react-syntax-highlighter?tab=readme-ov-file#prism)
  *
  * @author mlopezFC
  * @since 1.0.0
@@ -39,6 +39,9 @@ import com.vaadin.flow.component.react.ReactAdapterComponent;
 @Tag("syntax-highlighter-prism")
 public class SyntaxHighlighterPrism extends ReactAdapterComponent implements HasSize {
 
+  /**
+   * Constructs a new SyntaxHighlighter for Java language with empty content
+   */
   public SyntaxHighlighterPrism() {
     this(SHLanguagePrism.JAVA, "");
   }
