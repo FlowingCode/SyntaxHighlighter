@@ -30,12 +30,12 @@ public class SyntaxHighlighterTest {
   @Test
   public void testParameterizedConstructor() {
     SyntaxHighlighter sh =
-        new SyntaxHighlighter(SHLanguage.JAVASCRIPT, SHStyle.ANDROIDSTUDIO, "test", true, true);
+        new SyntaxHighlighter(SHLanguage.JAVASCRIPT, "test");
     assertEquals(SHLanguage.JAVASCRIPT, sh.getSHLanguage());
-    assertEquals(SHStyle.ANDROIDSTUDIO, sh.getSHStyle());
+    assertEquals(SHStyle.A11YDARK, sh.getSHStyle());
     assertEquals("test", sh.getContent());
-    assertTrue(sh.isShowLineNumbers());
-    assertTrue(sh.isWrapLines());
+    assertFalse(sh.isShowLineNumbers());
+    assertFalse(sh.isWrapLines());
   }
 
   @Test

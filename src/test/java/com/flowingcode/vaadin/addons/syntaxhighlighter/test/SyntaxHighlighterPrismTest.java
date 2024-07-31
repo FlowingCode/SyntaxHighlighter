@@ -30,12 +30,12 @@ public class SyntaxHighlighterPrismTest {
   @Test
   public void testParameterizedConstructor() {
     SyntaxHighlighterPrism sh = new SyntaxHighlighterPrism(SHLanguagePrism.JAVASCRIPT,
-        SHStylePrism.DUOTONEDARK, "test", true, true);
+        "test");
     assertEquals(SHLanguagePrism.JAVASCRIPT, sh.getSHLanguage());
-    assertEquals(SHStylePrism.DUOTONEDARK, sh.getSHStyle());
+    assertEquals(SHStylePrism.A11YDARK, sh.getSHStyle());
     assertEquals("test", sh.getContent());
-    assertTrue(sh.isShowLineNumbers());
-    assertTrue(sh.isWrapLines());
+    assertFalse(sh.isShowLineNumbers());
+    assertFalse(sh.isWrapLines());
   }
 
   @Test

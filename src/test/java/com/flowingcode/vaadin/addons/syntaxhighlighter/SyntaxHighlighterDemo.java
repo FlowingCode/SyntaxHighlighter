@@ -46,7 +46,7 @@ public class SyntaxHighlighterDemo extends VerticalLayout {
         "    </SyntaxHighlighter>\n" + //
         "  );\n" + //
         "};";
-    SyntaxHighlighter sh = new SyntaxHighlighter(SHLanguage.JAVASCRIPT, SHStyle.A11YDARK, defaultValue, false, false);
+    SyntaxHighlighter sh = new SyntaxHighlighter(SHLanguage.JAVASCRIPT, defaultValue);
     sh.setSizeFull();
     ComboBox<SHStyle> style = new ComboBox<>();
     style.setItems(SHStyle.values());

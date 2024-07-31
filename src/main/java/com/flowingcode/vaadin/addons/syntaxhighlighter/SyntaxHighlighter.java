@@ -39,27 +39,24 @@ import com.vaadin.flow.component.react.ReactAdapterComponent;
 public class SyntaxHighlighter extends ReactAdapterComponent implements HasSize {
 
   /**
-   * Constructs a new SyntaxHighlighter with default settings.
+   * Constructs a new SyntaxHighlighter for Java language with empty content
    */
   public SyntaxHighlighter() {
-    this(SHLanguage.JAVA, SHStyle.A11YDARK ,"", false, false);
+    this(SHLanguage.JAVA, "");
   }
 
   /**
-   * Constructs a new SyntaxHighlighter with the specified settings.
+   * Constructs a new SyntaxHighlighter with the specified language and content using a11yDark theme.
    *
    * @param language The programming language to highlight.
-   * @param style The style to apply to the highlighted code.
    * @param content The code content to highlight.
-   * @param showLineNumbers Whether to show line numbers.
-   * @param wrapLines Whether to wrap lines.
    */
-  public SyntaxHighlighter(SHLanguage language, SHStyle style, String content, boolean showLineNumbers, boolean wrapLines) {
-    setSHStyle(style);
+  public SyntaxHighlighter(SHLanguage language, String content) {
+    setSHStyle(SHStyle.A11YDARK);
     setSHLanguage(language);
     setContent(content);
-    setShowLineNumbers(showLineNumbers);
-    setWrapLines(wrapLines);
+    setShowLineNumbers(false);
+    setWrapLines(false);
   }
   
   public boolean isWrapLines() {

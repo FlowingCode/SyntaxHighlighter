@@ -46,7 +46,7 @@ public class SyntaxHighlighterPrismDemo extends VerticalLayout {
         "    </SyntaxHighlighter>\n" + //
         "  );\n" + //
         "};";
-    SyntaxHighlighterPrism sh = new SyntaxHighlighterPrism(SHLanguagePrism.JAVASCRIPT, SHStylePrism.A11YDARK, defaultValue, false, false);
+    SyntaxHighlighterPrism sh = new SyntaxHighlighterPrism(SHLanguagePrism.JAVASCRIPT, defaultValue);
     sh.setSizeFull();
     ComboBox<SHStylePrism> style = new ComboBox<>();
     style.setItems(SHStylePrism.values());
