@@ -57,16 +57,34 @@ public class SyntaxHighlighter extends BaseSyntaxHighlighter {
     setWrapLines(false);
   }
   
+  /**
+   * Obtains the current SyntaxHighlighter Language
+   * @return current language
+   */
   public SHLanguage getSHLanguage() {
     return SHLanguage.valueOf(getState("language", String.class).toUpperCase());
   }
+
+  /**
+   * Sets the SyntaxHighlighter Language
+   * @param language
+   */
   public void setSHLanguage(SHLanguage language) {
     setState("language", language.getName());
   }
 
+  /**
+   * Obtains the current SyntaxHighlighter Style
+   * @return style
+   */
   public SHStyle getSHStyle() {
     return SHStyle.valueOf(getState("stylename", String.class).toUpperCase());
   }
+
+  /**
+   * Sets the SyntaxHighlighter Style
+   * @param style
+   */
   public void setSHStyle(SHStyle style) {
     setState("stylename", style.getName());
   }
