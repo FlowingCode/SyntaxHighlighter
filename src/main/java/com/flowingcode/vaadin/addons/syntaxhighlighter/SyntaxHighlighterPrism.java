@@ -20,11 +20,9 @@
 
 package com.flowingcode.vaadin.addons.syntaxhighlighter;
 
-import com.vaadin.flow.component.HasSize;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.dependency.NpmPackage;
-import com.vaadin.flow.component.react.ReactAdapterComponent;
 
 /**
  * A Vaadin component that wraps the react-syntax-highlighter library to provide syntax highlighting for code snippets.
@@ -37,7 +35,7 @@ import com.vaadin.flow.component.react.ReactAdapterComponent;
 @NpmPackage(value = "react-syntax-highlighter", version = "15.5.0")
 @JsModule("./react-syntax-highlighter-prism.tsx")
 @Tag("syntax-highlighter-prism")
-public class SyntaxHighlighterPrism extends ReactAdapterComponent implements HasSize {
+public class SyntaxHighlighterPrism extends BaseSyntaxHighlighter {
 
   /**
    * Constructs a new SyntaxHighlighter for Java language with empty content
@@ -60,20 +58,6 @@ public class SyntaxHighlighterPrism extends ReactAdapterComponent implements Has
     setWrapLines(false);
   }
   
-  public boolean isWrapLines() {
-    return getState("wrapLines", Boolean.class);
-  }
-  public void setWrapLines(boolean wrapLines) {
-    setState("wrapLines", wrapLines);
-  }
-
-  public boolean isShowLineNumbers() {
-    return getState("showLineNumbers", Boolean.class);
-  }
-  public void setShowLineNumbers(boolean showLineNumbers) {
-    setState("showLineNumbers", showLineNumbers);
-  }
-
   public SHLanguagePrism getSHLanguage() {
     return SHLanguagePrism.valueOf(getState("language", String.class).toUpperCase());
   }
@@ -88,19 +72,4 @@ public class SyntaxHighlighterPrism extends ReactAdapterComponent implements Has
     setState("stylename", style.getName());
   }
   
-  public String getContent() {
-    return getState("content", String.class);
-  }
-  public void setContent(String content) {
-    setState("content", content);
-  }
-
-  @Override
-  public void setWidth(String width) {
-    getElement().executeJs("this.style.width = $0;", width);
-  }
-  public void setHeight(String height) {
-    getElement().executeJs("this.style.height = $0;", height);
-  }
-
 }
