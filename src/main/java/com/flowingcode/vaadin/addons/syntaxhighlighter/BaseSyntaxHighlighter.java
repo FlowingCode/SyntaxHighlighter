@@ -15,7 +15,7 @@ public class BaseSyntaxHighlighter extends ReactAdapterComponent implements HasS
    * @return true if the wrapLines feature is enabled
    */
   public boolean isWrapLines() {
-    return getState("wrapLines", Boolean.class);
+    return getState("wrapLongLines", Boolean.class);
   }
 
   /**
@@ -23,7 +23,7 @@ public class BaseSyntaxHighlighter extends ReactAdapterComponent implements HasS
    * @param wrapLines boolean to enable or disable the wrapLines feature
    */
   public void setWrapLines(boolean wrapLines) {
-    setState("wrapLines", wrapLines);
+    setState("wrapLongLines", wrapLines);
   }
 
   /**
