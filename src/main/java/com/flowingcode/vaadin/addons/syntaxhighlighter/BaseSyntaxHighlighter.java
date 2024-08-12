@@ -10,20 +10,20 @@ import com.vaadin.flow.component.react.ReactAdapterComponent;
 public class BaseSyntaxHighlighter extends ReactAdapterComponent implements HasSize {
   
   /**
-   * Returns true if the wrapLines feature is enabled
+   * Returns true if the wrapLongLines feature is enabled
    * More info: https://github.com/react-syntax-highlighter/react-syntax-highlighter?tab=readme-ov-file#props
-   * @return true if the wrapLines feature is enabled
+   * @return true if the wrapLongLines feature is enabled
    */
-  public boolean isWrapLines() {
+  public boolean isWrapLongLines() {
     return getState("wrapLongLines", Boolean.class);
   }
 
   /**
-   * Enable or disable the wrapLines feature
-   * @param wrapLines boolean to enable or disable the wrapLines feature
+   * Enable or disable the wrapLongLines feature
+   * @param wrapLongLines boolean to enable or disable the wrapLongLines feature
    */
-  public void setWrapLines(boolean wrapLines) {
-    setState("wrapLongLines", wrapLines);
+  public void setWrapLongLines(boolean wrapLongLines) {
+    setState("wrapLongLines", wrapLongLines);
   }
 
   /**

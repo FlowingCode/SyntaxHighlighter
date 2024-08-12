@@ -24,7 +24,7 @@ public class SyntaxHighlighterTest {
     assertEquals(SHStyle.A11YDARK, syntaxHighlighter.getSHStyle());
     assertEquals("", syntaxHighlighter.getContent());
     assertFalse(syntaxHighlighter.isShowLineNumbers());
-    assertFalse(syntaxHighlighter.isWrapLines());
+    assertFalse(syntaxHighlighter.isWrapLongLines());
   }
 
   @Test
@@ -35,7 +35,7 @@ public class SyntaxHighlighterTest {
     assertEquals(SHStyle.A11YDARK, sh.getSHStyle());
     assertEquals("test", sh.getContent());
     assertFalse(sh.isShowLineNumbers());
-    assertFalse(sh.isWrapLines());
+    assertFalse(sh.isWrapLongLines());
   }
 
   @Test
@@ -44,12 +44,12 @@ public class SyntaxHighlighterTest {
     syntaxHighlighter.setSHStyle(SHStyle.A11YDARK);
     syntaxHighlighter.setContent("test content");
     syntaxHighlighter.setShowLineNumbers(true);
-    syntaxHighlighter.setWrapLines(true);
+    syntaxHighlighter.setWrapLongLines(true);
 
     assertEquals(SHLanguage.PYTHON, syntaxHighlighter.getSHLanguage());
     assertEquals(SHStyle.A11YDARK, syntaxHighlighter.getSHStyle());
     assertEquals("test content", syntaxHighlighter.getContent());
     assertTrue(syntaxHighlighter.isShowLineNumbers());
-    assertTrue(syntaxHighlighter.isWrapLines());
+    assertTrue(syntaxHighlighter.isWrapLongLines());
   }
 }

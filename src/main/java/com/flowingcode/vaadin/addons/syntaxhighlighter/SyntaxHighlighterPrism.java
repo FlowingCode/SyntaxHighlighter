@@ -55,7 +55,7 @@ public class SyntaxHighlighterPrism extends BaseSyntaxHighlighter {
     setSHLanguage(language);
     setContent(content);
     setShowLineNumbers(false);
-    setWrapLines(false);
+    setWrapLongLines(false);
   }
   
   /**
