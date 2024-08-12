@@ -65,9 +65,9 @@ public class SyntaxHighlighterDemo extends VerticalLayout {
     showLineNumbers.addValueChangeListener(ev->{
       sh.setShowLineNumbers(ev.getValue());
     });
-    Checkbox wrapLines = new Checkbox("Wrap lines");
-    wrapLines.addValueChangeListener(ev->{
-      sh.setWrapLines(ev.getValue());
+    Checkbox wrapLongLines = new Checkbox("Wrap long lines");
+    wrapLongLines.addValueChangeListener(ev->{
+      sh.setWrapLongLines(ev.getValue());
     });
     TextArea ta = new TextArea();
     ta.setValue(defaultValue);
@@ -76,6 +76,6 @@ public class SyntaxHighlighterDemo extends VerticalLayout {
     button.addClickListener(ev->{
       sh.setContent(ta.getValue());
     });
-    add(new HorizontalLayout(style,languages), showLineNumbers, wrapLines, sh, ta, button);
+    add(new HorizontalLayout(style,languages), showLineNumbers, wrapLongLines, sh, ta, button);
   }
 }

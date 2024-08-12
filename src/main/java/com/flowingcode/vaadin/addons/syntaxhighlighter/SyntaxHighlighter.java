@@ -54,7 +54,7 @@ public class SyntaxHighlighter extends BaseSyntaxHighlighter {
     setSHLanguage(language);
     setContent(content);
     setShowLineNumbers(false);
-    setWrapLines(false);
+    setWrapLongLines(false);
   }
   
   /**

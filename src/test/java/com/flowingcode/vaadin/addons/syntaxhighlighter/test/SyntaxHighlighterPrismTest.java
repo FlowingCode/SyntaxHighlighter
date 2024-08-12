@@ -24,7 +24,7 @@ public class SyntaxHighlighterPrismTest {
     assertEquals(SHStylePrism.A11YDARK, syntaxHighlighter.getSHStyle());
     assertEquals("", syntaxHighlighter.getContent());
     assertFalse(syntaxHighlighter.isShowLineNumbers());
-    assertFalse(syntaxHighlighter.isWrapLines());
+    assertFalse(syntaxHighlighter.isWrapLongLines());
   }
 
   @Test
@@ -35,7 +35,7 @@ public class SyntaxHighlighterPrismTest {
     assertEquals(SHStylePrism.A11YDARK, sh.getSHStyle());
     assertEquals("test", sh.getContent());
     assertFalse(sh.isShowLineNumbers());
-    assertFalse(sh.isWrapLines());
+    assertFalse(sh.isWrapLongLines());
   }
 
   @Test
@@ -44,12 +44,12 @@ public class SyntaxHighlighterPrismTest {
     syntaxHighlighter.setSHStyle(SHStylePrism.A11YDARK);
     syntaxHighlighter.setContent("test content");
     syntaxHighlighter.setShowLineNumbers(true);
-    syntaxHighlighter.setWrapLines(true);
+    syntaxHighlighter.setWrapLongLines(true);
 
     assertEquals(SHLanguagePrism.PYTHON, syntaxHighlighter.getSHLanguage());
     assertEquals(SHStylePrism.A11YDARK, syntaxHighlighter.getSHStyle());
     assertEquals("test content", syntaxHighlighter.getContent());
     assertTrue(syntaxHighlighter.isShowLineNumbers());
-    assertTrue(syntaxHighlighter.isWrapLines());
+    assertTrue(syntaxHighlighter.isWrapLongLines());
   }
 }
