@@ -26,7 +26,7 @@ package com.flowingcode.vaadin.addons.syntaxhighlighter;
  * @author mlopezFC
  * @since 1.0.0
  */
-public enum SHLanguagePrism {
+public enum ShLanguagePrism {
   
   ACTIONSCRIPT("actionscript"),
   ADA("ada"),
@@ -306,7 +306,7 @@ public enum SHLanguagePrism {
   
   private final String name;
   
-  private SHLanguagePrism(String language) {
+  private ShLanguagePrism(String language) {
     name = language;
   }
 
