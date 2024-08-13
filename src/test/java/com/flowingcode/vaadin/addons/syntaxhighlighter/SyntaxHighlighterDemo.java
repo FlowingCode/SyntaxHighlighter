@@ -46,7 +46,7 @@ public class SyntaxHighlighterDemo extends VerticalLayout {
         "    </SyntaxHighlighter>\n" + //
         "  );\n" + //
         "};";
-    SyntaxHighlighter sh = new SyntaxHighlighter(SHLanguage.JAVASCRIPT, defaultValue);
+    SyntaxHighlighter sh = new SyntaxHighlighter(ShLanguage.JAVASCRIPT, defaultValue);
     sh.setSizeFull();
     ComboBox<SHStyle> style = new ComboBox<>();
     style.setItems(SHStyle.values());
@@ -54,10 +54,10 @@ public class SyntaxHighlighterDemo extends VerticalLayout {
       sh.setSHStyle(style.getValue());
     });
     style.setValue(SHStyle.A11YDARK);
-    ComboBox<SHLanguage> languages = new ComboBox<>();
-    languages.setItems(SHLanguage.values());
+    ComboBox<ShLanguage> languages = new ComboBox<>();
+    languages.setItems(ShLanguage.values());
     languages.setItemLabelGenerator(language->language.getName());
-    languages.setValue(SHLanguage.JAVASCRIPT);
+    languages.setValue(ShLanguage.JAVASCRIPT);
     languages.addValueChangeListener(ev->{
       sh.setSHLanguage(ev.getValue());
     });

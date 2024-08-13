@@ -40,7 +40,7 @@ public class SyntaxHighlighter extends BaseSyntaxHighlighter {
    * Constructs a new SyntaxHighlighter for Java language with empty content
    */
   public SyntaxHighlighter() {
-    this(SHLanguage.JAVA, "");
+    this(ShLanguage.JAVA, "");
   }
 
   /**
@@ -49,7 +49,7 @@ public class SyntaxHighlighter extends BaseSyntaxHighlighter {
    * @param language The programming language to highlight.
    * @param content The code content to highlight.
    */
-  public SyntaxHighlighter(SHLanguage language, String content) {
+  public SyntaxHighlighter(ShLanguage language, String content) {
     setSHStyle(SHStyle.A11YDARK);
     setSHLanguage(language);
     setContent(content);
@@ -61,15 +61,15 @@ public class SyntaxHighlighter extends BaseSyntaxHighlighter {
    * Obtains the current SyntaxHighlighter Language
    * @return current language
    */
-  public SHLanguage getSHLanguage() {
-    return SHLanguage.valueOf(getState("language", String.class).toUpperCase());
+  public ShLanguage getSHLanguage() {
+    return ShLanguage.valueOf(getState("language", String.class).toUpperCase());
   }
 
   /**
    * Sets the SyntaxHighlighter Language
    * @param language
    */
-  public void setSHLanguage(SHLanguage language) {
+  public void setSHLanguage(ShLanguage language) {
     setState("language", language.getName());
   }
 
