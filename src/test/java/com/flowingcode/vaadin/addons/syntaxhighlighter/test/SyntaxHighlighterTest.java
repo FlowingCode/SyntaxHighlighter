@@ -20,7 +20,7 @@ public class SyntaxHighlighterTest {
 
   @Test
   public void testDefaultConstructor() {
-    assertEquals(ShLanguage.JAVA, syntaxHighlighter.getSHLanguage());
+    assertEquals(ShLanguage.JAVA, syntaxHighlighter.getShLanguage());
     assertEquals(ShStyle.A11YDARK, syntaxHighlighter.getShStyle());
     assertEquals("", syntaxHighlighter.getContent());
     assertFalse(syntaxHighlighter.isShowLineNumbers());
@@ -31,7 +31,7 @@ public class SyntaxHighlighterTest {
   public void testParameterizedConstructor() {
     SyntaxHighlighter sh =
         new SyntaxHighlighter(ShLanguage.JAVASCRIPT, "test");
-    assertEquals(ShLanguage.JAVASCRIPT, sh.getSHLanguage());
+    assertEquals(ShLanguage.JAVASCRIPT, sh.getShLanguage());
     assertEquals(ShStyle.A11YDARK, sh.getShStyle());
     assertEquals("test", sh.getContent());
     assertFalse(sh.isShowLineNumbers());
@@ -40,13 +40,13 @@ public class SyntaxHighlighterTest {
 
   @Test
   public void testSettersAndGetters() {
-    syntaxHighlighter.setSHLanguage(ShLanguage.PYTHON);
+    syntaxHighlighter.setShLanguage(ShLanguage.PYTHON);
     syntaxHighlighter.setShStyle(ShStyle.A11YDARK);
     syntaxHighlighter.setContent("test content");
     syntaxHighlighter.setShowLineNumbers(true);
     syntaxHighlighter.setWrapLongLines(true);
 
-    assertEquals(ShLanguage.PYTHON, syntaxHighlighter.getSHLanguage());
+    assertEquals(ShLanguage.PYTHON, syntaxHighlighter.getShLanguage());
     assertEquals(ShStyle.A11YDARK, syntaxHighlighter.getShStyle());
     assertEquals("test content", syntaxHighlighter.getContent());
     assertTrue(syntaxHighlighter.isShowLineNumbers());

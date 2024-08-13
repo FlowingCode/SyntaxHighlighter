@@ -61,7 +61,7 @@ const Component = () => {
     languages.setItemLabelGenerator(language->language.getName());
     languages.setValue(ShLanguage.JAVASCRIPT);
     languages.addValueChangeListener(ev->{
-      sh.setSHLanguage(ev.getValue());
+      sh.setShLanguage(ev.getValue());
     });
     Checkbox showLineNumbers = new Checkbox("Show Line Numbers");
     showLineNumbers.addValueChangeListener(ev->{
