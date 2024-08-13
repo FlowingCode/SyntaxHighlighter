@@ -25,7 +25,7 @@ package com.flowingcode.vaadin.addons.syntaxhighlighter;
  * @author mlopezFC
  * @since 1.0.0
  */
-public enum SHStyle {
+public enum ShStyle {
   
   A11YDARK("a11yDark"),
   A11YLIGHT("a11yLight"),
@@ -127,7 +127,7 @@ public enum SHStyle {
   
   private final String name;
   
-  private SHStyle(String style) {
+  private ShStyle(String style) {
     name = style;
   }
 

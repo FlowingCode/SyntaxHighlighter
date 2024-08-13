@@ -50,7 +50,7 @@ public class SyntaxHighlighter extends BaseSyntaxHighlighter {
    * @param content The code content to highlight.
    */
   public SyntaxHighlighter(ShLanguage language, String content) {
-    setSHStyle(SHStyle.A11YDARK);
+    setShStyle(ShStyle.A11YDARK);
     setSHLanguage(language);
     setContent(content);
     setShowLineNumbers(false);
@@ -77,15 +77,15 @@ public class SyntaxHighlighter extends BaseSyntaxHighlighter {
    * Obtains the current SyntaxHighlighter Style
    * @return style
    */
-  public SHStyle getSHStyle() {
-    return SHStyle.valueOf(getState("stylename", String.class).toUpperCase());
+  public ShStyle getShStyle() {
+    return ShStyle.valueOf(getState("stylename", String.class).toUpperCase());
   }
 
   /**
    * Sets the SyntaxHighlighter Style
    * @param style
    */
-  public void setSHStyle(SHStyle style) {
+  public void setShStyle(ShStyle style) {
     setState("stylename", style.getName());
   }
 
