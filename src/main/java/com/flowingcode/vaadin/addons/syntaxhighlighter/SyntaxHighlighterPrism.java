@@ -51,7 +51,7 @@ public class SyntaxHighlighterPrism extends BaseSyntaxHighlighter {
    * @param content The code content to highlight.
    */
   public SyntaxHighlighterPrism(ShLanguagePrism language, String content) {
-    setSHStyle(SHStylePrism.A11YDARK);
+    setShStyle(ShStylePrism.A11YDARK);
     setShLanguage(language);
     setContent(content);
     setShowLineNumbers(false);
@@ -78,15 +78,15 @@ public class SyntaxHighlighterPrism extends BaseSyntaxHighlighter {
    * Obtains the current SyntaxHighlighterPrism Style
    * @return
    */
-  public SHStylePrism getSHStyle() {
-    return SHStylePrism.valueOf(getState("stylename", String.class).toUpperCase());
+  public ShStylePrism getShStyle() {
+    return ShStylePrism.valueOf(getState("stylename", String.class).toUpperCase());
   }
 
   /**
    * Sets the SyntaxHighlighter Style
    * @param style
    */
-  public void setSHStyle(SHStylePrism style) {
+  public void setShStyle(ShStylePrism style) {
     setState("stylename", style.getName());
   }
   

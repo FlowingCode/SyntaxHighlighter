@@ -26,7 +26,7 @@ package com.flowingcode.vaadin.addons.syntaxhighlighter;
  * @author mlopezFC
  * @since 1.0.0
  */
-public enum SHStylePrism {
+public enum ShStylePrism {
   
   COY("coy"),
   DARK("dark"),
@@ -75,7 +75,7 @@ public enum SHStylePrism {
   
   private final String name;
   
-  private SHStylePrism(String style) {
+  private ShStylePrism(String style) {
     name = style;
   }
 
