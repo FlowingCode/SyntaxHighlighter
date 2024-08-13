@@ -36,16 +36,18 @@ import com.vaadin.flow.router.Route;
 public class SyntaxHighlighterDemo extends VerticalLayout {
 
   public SyntaxHighlighterDemo() {
-    String defaultValue = "import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';\n" + //
-        "import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';\n" + //
-        "const Component = () => {\n" + //
-        "  const codeString = '(num) => num + 1';\n" + //
-        "  return (\n" + //
-        "    <SyntaxHighlighter language=\"javascript\" style={dark}>\n" + //
-        "      {codeString}\n" + //
-        "    </SyntaxHighlighter>\n" + //
-        "  );\n" + //
-        "};";
+    String defaultValue = """
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+const Component = () => {
+  const codeString = '(num) => num + 1';
+  return (
+    <SyntaxHighlighter language=\"javascript\" style={dark}>
+      {codeString}
+    </SyntaxHighlighter>
+  );
+};
+    """;
     SyntaxHighlighter sh = new SyntaxHighlighter(ShLanguage.JAVASCRIPT, defaultValue);
     sh.setSizeFull();
     ComboBox<SHStyle> style = new ComboBox<>();
