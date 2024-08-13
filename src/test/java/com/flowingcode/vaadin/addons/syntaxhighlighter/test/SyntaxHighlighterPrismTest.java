@@ -3,7 +3,7 @@ package com.flowingcode.vaadin.addons.syntaxhighlighter.test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import com.flowingcode.vaadin.addons.syntaxhighlighter.SHLanguagePrism;
+import com.flowingcode.vaadin.addons.syntaxhighlighter.ShLanguagePrism;
 import com.flowingcode.vaadin.addons.syntaxhighlighter.SHStylePrism;
 import com.flowingcode.vaadin.addons.syntaxhighlighter.SyntaxHighlighterPrism;
 import org.junit.Before;
@@ -20,7 +20,7 @@ public class SyntaxHighlighterPrismTest {
 
   @Test
   public void testDefaultConstructor() {
-    assertEquals(SHLanguagePrism.JAVA, syntaxHighlighter.getSHLanguage());
+    assertEquals(ShLanguagePrism.JAVA, syntaxHighlighter.getShLanguage());
     assertEquals(SHStylePrism.A11YDARK, syntaxHighlighter.getSHStyle());
     assertEquals("", syntaxHighlighter.getContent());
     assertFalse(syntaxHighlighter.isShowLineNumbers());
@@ -29,9 +29,9 @@ public class SyntaxHighlighterPrismTest {
 
   @Test
   public void testParameterizedConstructor() {
-    SyntaxHighlighterPrism sh = new SyntaxHighlighterPrism(SHLanguagePrism.JAVASCRIPT,
+    SyntaxHighlighterPrism sh = new SyntaxHighlighterPrism(ShLanguagePrism.JAVASCRIPT,
         "test");
-    assertEquals(SHLanguagePrism.JAVASCRIPT, sh.getSHLanguage());
+    assertEquals(ShLanguagePrism.JAVASCRIPT, sh.getShLanguage());
     assertEquals(SHStylePrism.A11YDARK, sh.getSHStyle());
     assertEquals("test", sh.getContent());
     assertFalse(sh.isShowLineNumbers());
@@ -40,13 +40,13 @@ public class SyntaxHighlighterPrismTest {
 
   @Test
   public void testSettersAndGetters() {
-    syntaxHighlighter.setSHLanguage(SHLanguagePrism.PYTHON);
+    syntaxHighlighter.setShLanguage(ShLanguagePrism.PYTHON);
     syntaxHighlighter.setSHStyle(SHStylePrism.A11YDARK);
     syntaxHighlighter.setContent("test content");
     syntaxHighlighter.setShowLineNumbers(true);
     syntaxHighlighter.setWrapLongLines(true);
 
-    assertEquals(SHLanguagePrism.PYTHON, syntaxHighlighter.getSHLanguage());
+    assertEquals(ShLanguagePrism.PYTHON, syntaxHighlighter.getShLanguage());
     assertEquals(SHStylePrism.A11YDARK, syntaxHighlighter.getSHStyle());
     assertEquals("test content", syntaxHighlighter.getContent());
     assertTrue(syntaxHighlighter.isShowLineNumbers());

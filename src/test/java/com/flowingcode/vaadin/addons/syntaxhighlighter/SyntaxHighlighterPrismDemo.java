@@ -48,7 +48,7 @@ const Component = () => {
   );
 };
     """;
-    SyntaxHighlighterPrism sh = new SyntaxHighlighterPrism(SHLanguagePrism.JAVASCRIPT, defaultValue);
+    SyntaxHighlighterPrism sh = new SyntaxHighlighterPrism(ShLanguagePrism.JAVASCRIPT, defaultValue);
     sh.setSizeFull();
     ComboBox<SHStylePrism> style = new ComboBox<>();
     style.setItems(SHStylePrism.values());
@@ -56,12 +56,12 @@ const Component = () => {
       sh.setSHStyle(style.getValue());
     });
     style.setValue(SHStylePrism.A11YDARK);
-    ComboBox<SHLanguagePrism> languages = new ComboBox<>();
-    languages.setItems(SHLanguagePrism.values());
+    ComboBox<ShLanguagePrism> languages = new ComboBox<>();
+    languages.setItems(ShLanguagePrism.values());
     languages.setItemLabelGenerator(language->language.getName());
-    languages.setValue(SHLanguagePrism.TYPESCRIPT);
+    languages.setValue(ShLanguagePrism.TYPESCRIPT);
     languages.addValueChangeListener(ev->{
-      sh.setSHLanguage(ev.getValue());
+      sh.setShLanguage(ev.getValue());
     });
     Checkbox showLineNumbers = new Checkbox("Show Line Numbers");
     showLineNumbers.addValueChangeListener(ev->{

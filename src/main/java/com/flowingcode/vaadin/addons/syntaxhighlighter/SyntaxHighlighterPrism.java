@@ -41,7 +41,7 @@ public class SyntaxHighlighterPrism extends BaseSyntaxHighlighter {
    * Constructs a new SyntaxHighlighter for Java language with empty content
    */
   public SyntaxHighlighterPrism() {
-    this(SHLanguagePrism.JAVA, "");
+    this(ShLanguagePrism.JAVA, "");
   }
 
   /**
@@ -50,9 +50,9 @@ public class SyntaxHighlighterPrism extends BaseSyntaxHighlighter {
    * @param language The programming language to highlight.
    * @param content The code content to highlight.
    */
-  public SyntaxHighlighterPrism(SHLanguagePrism language, String content) {
+  public SyntaxHighlighterPrism(ShLanguagePrism language, String content) {
     setSHStyle(SHStylePrism.A11YDARK);
-    setSHLanguage(language);
+    setShLanguage(language);
     setContent(content);
     setShowLineNumbers(false);
     setWrapLongLines(false);
@@ -62,15 +62,15 @@ public class SyntaxHighlighterPrism extends BaseSyntaxHighlighter {
    * Obtains the current SyntaxHighlighterPrism Language
    * @return
    */
-  public SHLanguagePrism getSHLanguage() {
-    return SHLanguagePrism.valueOf(getState("language", String.class).toUpperCase());
+  public ShLanguagePrism getShLanguage() {
+    return ShLanguagePrism.valueOf(getState("language", String.class).toUpperCase());
   }
 
   /**
    * Sets the SyntaxHighlighterPrism Language
    * @param language
    */
-  public void setSHLanguage(SHLanguagePrism language) {
+  public void setShLanguage(ShLanguagePrism language) {
     setState("language", language.getName());
   }
 
