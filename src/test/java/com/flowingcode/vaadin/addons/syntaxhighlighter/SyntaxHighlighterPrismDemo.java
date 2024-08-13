@@ -50,12 +50,12 @@ const Component = () => {
     """;
     SyntaxHighlighterPrism sh = new SyntaxHighlighterPrism(ShLanguagePrism.JAVASCRIPT, defaultValue);
     sh.setSizeFull();
-    ComboBox<SHStylePrism> style = new ComboBox<>();
-    style.setItems(SHStylePrism.values());
+    ComboBox<ShStylePrism> style = new ComboBox<>();
+    style.setItems(ShStylePrism.values());
     style.addValueChangeListener(ev->{
-      sh.setSHStyle(style.getValue());
+      sh.setShStyle(style.getValue());
     });
-    style.setValue(SHStylePrism.A11YDARK);
+    style.setValue(ShStylePrism.A11YDARK);
     ComboBox<ShLanguagePrism> languages = new ComboBox<>();
     languages.setItems(ShLanguagePrism.values());
     languages.setItemLabelGenerator(language->language.getName());
