@@ -3,7 +3,7 @@ package com.flowingcode.vaadin.addons.syntaxhighlighter.test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-import com.flowingcode.vaadin.addons.syntaxhighlighter.SHLanguage;
+import com.flowingcode.vaadin.addons.syntaxhighlighter.ShLanguage;
 import com.flowingcode.vaadin.addons.syntaxhighlighter.SHStyle;
 import com.flowingcode.vaadin.addons.syntaxhighlighter.SyntaxHighlighter;
 import org.junit.Before;
@@ -20,7 +20,7 @@ public class SyntaxHighlighterTest {
 
   @Test
   public void testDefaultConstructor() {
-    assertEquals(SHLanguage.JAVA, syntaxHighlighter.getSHLanguage());
+    assertEquals(ShLanguage.JAVA, syntaxHighlighter.getSHLanguage());
     assertEquals(SHStyle.A11YDARK, syntaxHighlighter.getSHStyle());
     assertEquals("", syntaxHighlighter.getContent());
     assertFalse(syntaxHighlighter.isShowLineNumbers());
@@ -30,8 +30,8 @@ public class SyntaxHighlighterTest {
   @Test
   public void testParameterizedConstructor() {
     SyntaxHighlighter sh =
-        new SyntaxHighlighter(SHLanguage.JAVASCRIPT, "test");
-    assertEquals(SHLanguage.JAVASCRIPT, sh.getSHLanguage());
+        new SyntaxHighlighter(ShLanguage.JAVASCRIPT, "test");
+    assertEquals(ShLanguage.JAVASCRIPT, sh.getSHLanguage());
     assertEquals(SHStyle.A11YDARK, sh.getSHStyle());
     assertEquals("test", sh.getContent());
     assertFalse(sh.isShowLineNumbers());
@@ -40,13 +40,13 @@ public class SyntaxHighlighterTest {
 
   @Test
   public void testSettersAndGetters() {
-    syntaxHighlighter.setSHLanguage(SHLanguage.PYTHON);
+    syntaxHighlighter.setSHLanguage(ShLanguage.PYTHON);
     syntaxHighlighter.setSHStyle(SHStyle.A11YDARK);
     syntaxHighlighter.setContent("test content");
     syntaxHighlighter.setShowLineNumbers(true);
     syntaxHighlighter.setWrapLongLines(true);
 
-    assertEquals(SHLanguage.PYTHON, syntaxHighlighter.getSHLanguage());
+    assertEquals(ShLanguage.PYTHON, syntaxHighlighter.getSHLanguage());
     assertEquals(SHStyle.A11YDARK, syntaxHighlighter.getSHStyle());
     assertEquals("test content", syntaxHighlighter.getContent());
     assertTrue(syntaxHighlighter.isShowLineNumbers());

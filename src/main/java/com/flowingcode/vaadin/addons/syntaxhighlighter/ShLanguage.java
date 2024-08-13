@@ -25,7 +25,7 @@ package com.flowingcode.vaadin.addons.syntaxhighlighter;
  * @author mlopezFC
  * @since 1.0.0
  */
-public enum SHLanguage {
+public enum ShLanguage {
   
   ONEC("oneC"),
   ABNF("abnf"),
@@ -221,7 +221,7 @@ public enum SHLanguage {
   
   private final String name;
   
-  private SHLanguage(String language) {
+  private ShLanguage(String language) {
     name = language;
   }
 
