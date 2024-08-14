@@ -4,7 +4,7 @@
 
     <groupId>com.flowingcode.vaadin.addons</groupId>
     <artifactId>syntax-highlighter-addon</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>Syntax Highlighter Add-on</name>
     <description>Syntax Highlighter Add-on for Vaadin Flow</description>
     <url>https://www.flowingcode.com/en/open-source/</url>
@@ -40,7 +40,7 @@
         <url>https://github.com/FlowingCode/SyntaxHighlighter</url>
         <connection>scm:git:git://github.com/FlowingCode/SyntaxHighlighter.git</connection>
         <developerConnection>scm:git:ssh://git@github.com:/FlowingCode/SyntaxHighlighter.git</developerConnection>
-        <tag>1.0.0</tag>
+        <tag>master</tag>
     </scm>
 
     <distributionManagement>
