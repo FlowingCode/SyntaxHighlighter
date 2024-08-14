@@ -31,7 +31,7 @@ import com.vaadin.flow.component.dependency.NpmPackage;
  * @since 1.0.0
  */
 @SuppressWarnings("serial")
-@NpmPackage(value = "react-syntax-highlighter", version = "15.5.0")
+@NpmPackage(value = "react-syntax-highlighter", version = "npm:@fengkx/react-syntax-highlighter@15.6.1")
 @JsModule("./react-syntax-highlighter.tsx")
 @Tag("syntax-highlighter")
 public class SyntaxHighlighter extends BaseSyntaxHighlighter {
