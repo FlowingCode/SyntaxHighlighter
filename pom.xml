@@ -496,7 +496,30 @@
                 </plugins>
             </build>
         </profile>
-        
+
+        <profile>
+            <id>v25</id>
+            <properties>
+                <maven.compiler.source>21</maven.compiler.source>
+                <maven.compiler.target>21</maven.compiler.target>
+                <vaadin.version>25.0.3</vaadin.version>
+                <flowingcode.commons.demo.version>5.2.0</flowingcode.commons.demo.version>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>com.vaadin</groupId>
+                    <artifactId>vaadin-dev</artifactId>
+                    <optional>true</optional>
+                </dependency>
+                <dependency>
+                    <groupId>jakarta.servlet</groupId>
+                    <artifactId>jakarta.servlet-api</artifactId>
+                    <version>6.1.0</version>
+                    <scope>test</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+
     </profiles>
 
 </project>
